@@ -1,0 +1,167 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="newstyle.css">
+
+<title>Raihanatul Atirah | Personal Website Home</title>
+</head>
+<body>
+<header> 
+
+    <h1>PERSONAL WEBSITE: HOME</h1>
+    <div id="header-clock" class="header-datetime"></div>
+</header>
+<nav>
+    <a href="new index.html">
+         <span class="nav-icon large-icon">&#127968;</span>
+         <span class="nav-text"> Home page </span></a>
+    <a href="biodata.html">&#129493 Biodata</a>
+    <a href="experience.html"> &#128187 Experience</a>
+    <a href="education.html"> &#127891 Education</a>
+    <a href="family.html"> &#128106 Family</a>
+    <a href="gallery.html"> &#128248 Gallery</a>
+    
+    
+    **Social Media:**<br>
+    <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank">
+      <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;">
+    </a>
+</nav>
+
+<audio autoplay>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<!--TITLE-->
+<h2 class="page-title">Experience</h2>
+
+<!--ZUS section-->
+<section id="zus" class="section section-light-pink">
+    <h2>1. Barista at ZUS Coffee (Part-Time)</h2>
+
+    <div class="centered-image">
+    <img src="zus.png" alt="ZUS" usemap="#zusmap" width="510" height="300" boarder="10">
+    </div>
+        <map name="zusmap">
+            <area shape="rect" coords="920,180,1120,340" alt="Zus" href="https://www.uniqlo.com/my/">
+        </map>
+    <p>
+        <strong>Duration:</strong> Waiting period after SPM (High School) results, prior to starting Diploma studies.
+    </p>
+    <p>
+        Working at ZUS Coffe taught me how a high-volume, modern coffee chain operates. I learned how to prepare ZUS' signature beverages, manage mobile app orders, and handle peak hours efficiently. The role required strong teamwork, fast service, and accuracy in fulfilling custom orders.
+    </p>
+    <p>
+        <strong>Location:</strong>
+        <a href="https://maps.app.goo.gl/Za56ZNptEwQ77U9w8" target="_blank" title="View Zus Coffee IOI City Mall Putrajaya on Google Maps"> Zus Coffee, IOI Putrajaya</a> (Click to view map)
+    </p>
+    <p>
+        <strong>Challenges Faced</strong>
+    </p>
+    <ul>
+        <li>Handling large order volumes during lunch hours and online delivery peaks.</li>
+        <li>Ensuring accuracy for customized drinks, including sugar levels and add-ons.</li>
+        <li>Maintaining cleanliness and speed, especially duing promotional campaigns causing higher customer flow.</li>
+    </ul>
+</section>
+<!--Tealive section-->
+<section id="tealive" class="section section-peach">
+    <h2>2. Tea Barista at Tealive (Part-Time)</h2>
+    <div class="centered-image">
+    <img src="tealive.jpg" alt=Tealive width="510" height="300" boarder="10">
+    </div>
+    <p>
+        <strong>Duration:</strong> Semester break 1st semester.
+    </p>
+    <p>
+        During my first semester break, I worked at Tealive. focusing on food and beverage preparation. This role was fast-paced and required precision and attention to detail to ensure every drink was prepared according to strict recipes. I was responsible for customer service, order taking, drink preparation, and maintaining hygiene standards. 
+    </p>
+    <p>
+        <strong>Location:</strong>
+        <a href="https://maps.app.goo.gl/GYH2uQy6LSqdP9Jo7" target="_blank" title="View Ayer 8 Putrajaya on Google Maps">Ayer8 Putrajaya</a> (Click to view map)
+    </p>
+   <p>
+        <strong>Challenges Faced</strong>
+    </p>
+    <ul>
+        <li>Mastering the preparation of over 50 different beverages quickly and accurately under time pressure.</li>
+        <li>Managing inventory and ensuring fresh ingredients (like freshly cooked pearls) were always available during peak hours.</li>
+        <li>Working in a small, intense team environment where communication and coordination were essential for speed.</li>
+    </ul>
+</section>
+<!--Pastribella section-->
+<section id="pastribella" class="section section-cream">
+    <h2>3. Barista at Pastribella Cyberjaya (Part-Time)</h2>
+    <div class="centered-image">
+            <img src="pastry.jpeg" alt="PASTRIBELLA" width="510" height="300" boarder="10">
+            </div>
+    <p>
+        <strong>Duration:</strong> Semester break 3rd semester.
+    </p>
+    <p>
+        My experience at Pastribella allowed me to explore a more artisanal cafe environment. I learned how handcrafted pastries and beverages are prepared daily and how a small, cozy cafe maintains its quality and customer satisfaction. I was responsible for preparing drinks, assisting with pastry arrangements, and engaging closely with customers to understand their preferences. 
+    </p>
+    <p>
+        <strong>Location:</strong>
+        <a href="https://maps.app.goo.gl/bwVNj44Pn6UkbUzM6" target="_blank" title="View Pastribella on Google Maps">Pastribella, Cyberjaya</a> (Click to view map)
+    </p>
+   <p>
+        <strong>Challenges Faced</strong>
+    </p>
+    <ul>
+        <li>Managing high morning traffic when customers rush in before work hours.</li>
+        <li>Ensuring pastries remain fresh and attractively displayed throughout the day.</li>
+        <li>Learning precise drink ratios and maintaining consistent taste for signature beverages.</li>
+    </ul>
+</section>
+<footer>
+    Copyright &copy; 2025 Raihanatul Atirah Binti Ridzuan. All Rights Reserved.
+    <marquee behavior="alternate" direction="right"> raihanatul 'atirah </marquee> 
+</footer>
+<script>
+    // Helper function for padding single-digit numbers
+    const pad = (number) => (number < 10 ? '0' + number : number);
+
+    function updateClock(){
+        const now = new Date();
+
+        // Arrays for formatting names manually
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // Day/Date
+        const dayOfWeek = days[now.getDay()];
+        const dayOfMonth = now.getDate();
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        const dateString = `${dayOfWeek}, ${pad(dayOfMonth)} ${monthName} ${year}`;
+
+        // Time
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert 24h format to 12h format
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
+
+        const clockElement = document.getElementById('header-clock');
+        if (clockElement) {
+            // Display date string, followed by time string on the next line
+            clockElement.innerHTML = `
+                ${dateString}
+                <br>
+                ${timeString}
+            `;
+        }
+    }
+
+    // FIX: This section MUST be outside the updateClock function so it runs on page load.
+    document.addEventListener('DOMContentLoaded', () => {
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
+</script>
+</body>
+</html>

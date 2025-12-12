@@ -1,0 +1,174 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="newstyle.css">
+
+<title>Raihanatul Atirah | Personal Website Home</title>
+</head>
+<body>
+<header> 
+
+    <h1>PERSONAL WEBSITE: HOME</h1>
+    <div id="header-clock" class="header-datetime"></div>
+</header>
+<nav>
+    <a href="new index.html">
+         <span class="nav-icon large-icon">&#127968;</span>
+         <span class="nav-text"> Home page </span></a>
+    <a href="biodata.html">&#129493 Biodata</a>
+    <a href="experience.html"> &#128187 Experience</a>
+    <a href="education.html"> &#127891 Education</a>
+    <a href="family.html"> &#128106 Family</a>
+    <a href="gallery.html"> &#128248 Gallery</a>
+    
+    
+    **Social Media:**<br>
+    <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank">
+        <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;">
+    </a>
+</nav>
+
+<audio autoplay>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<!--TITLE-->
+<h2 class="page-title">Education</h2>
+
+<div class="education-card-wrapper">
+    <!--SKPP9(2)-->
+    <section id="sk" class="section section-light-pink">
+        <h2>1. SK Putrajaya Presint 9(2)</h2>
+        <p><strong>Level:</strong>Elementary School</p>
+
+        <div class="centered-image">
+            <img src="sk.jpg" alt="Elementary School" width="200" height="120">
+        </div>
+        <h3> Academic Achievements</h3>
+        <ul>
+            <p>&diams;<strong> Grade 3:</strong> Ranked 4th in class, received the Best Islamic Education Subject Award.</p>
+            <p>&diams;<strong> Grade 5:</strong> Ranked 3rd in class, received the Best Islamic Education Subject Award.</p>
+            <p>&diams;<strong> Grade 6:</strong> Achieved 4A 2B in the <em>Ujian Penilaian Sekolah Rendah (UPSR)</em>.</p>
+        </ul>
+    </section>
+<!--SRA AN-NAJAH)-->
+    <section id="sra" class="section section-peach">
+        <h2>2. Sekolah Rendah Agama An-Najah</h2>
+
+        <div class="centered-image">
+            <img src="sra.jpg" alt="sekolah agama" width="200" height="120">
+        </div>
+        <h3> Academic Achievements</h3>
+        <ul>
+            <p>&diams;<strong> Grade 1:</strong> Ranked Top 10 in the grade.</p>
+            <p>&diams;<strong> Grade 3:</strong> Ranked 6th in class.</p>
+            <p>&diams;<strong> Grade 4:</strong> Ranked 2nd in class, received the Best <em>Akhlak</em> and <em>Feqah</em> Subject Award.</p>
+            <p>&diams;<strong> Grade 5 (UPKK):</strong> Achieved 6A 1B in the <em>Ujian Penilaian Kelas KAFA (UPKK)</em>.</p>
+            <p>&diams;<strong> Grade 6 (UPSRA):</strong> Achieved 8A 1B in the <em>Ujian Penilaian Sekolah Rendah Agama (UPSRA)</em>.</p>
+        </ul>
+    </section>
+<!--SMKPP9(2)-->
+    <section id="smk" class="section section-cream">
+        <h2>3. SMK Putrajaya Presint 9(2)</h2>
+        <p><strong>Level:</strong> Secondary School</p>
+
+        <div class="centered-image">
+            <img src="smk.jpeg" alt="Secondary School" width="200" height="120">
+        </div>
+        <h3> Academic Achievements</h3>
+        <ul>
+            <p>&diams;<strong> Form 1:</strong> Ranked 2nd in class, 5th in form, and received the Best Islamic Education Subject Award.</p>
+            <p>&diams;<strong> Form 2:</strong> Ranked 4th in class.</p>
+            <p>&diams;<strong> Form 4:</strong> Ranked 2nd in class, received the Best Mathematics Subject Award.</p>
+            <p>&diams;<strong> Form 5 (SPM):</strong> Achieved 5A 3B in the <em>Sijil Pelajaran Malaysia (SPM)</em>.</p>
+        </ul>
+    </section>
+</div>
+
+<section id="uitm" class="section">
+    <h2>4. Universiti Teknologi MARA (UiTM)</h2>
+    <p><strong>Program:</strong>Diploma in Science Information</p>
+
+    <div class="centered-image profile">
+        <img src="sem1.jpeg" alt="SEM 1">
+    </div>
+
+    <h3>Academic Performance (Current)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Semester</th>
+                <th>CGPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semester 1</td>
+                <td>3.67</td>
+            </tr>
+            <tr>
+                <td>Semester 2</td>
+                <td>3.62</td>
+            </tr>
+            <tr>
+                <td>Semester 3</td>
+                <td>3.51</td>
+            </tr>
+            <tr>
+                <td>Semester 4</td>
+                <td>3.55</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<footer>
+    Copyright &copy; 2025 Raihanatul Atirah Binti Ridzuan. All Rights Reserved.
+    <marquee behavior="alternate" direction="right"> raihanatul 'atirah </marquee> 
+</footer>
+<script>
+    // Helper function for padding single-digit numbers
+    const pad = (number) => (number < 10 ? '0' + number : number);
+
+    function updateClock(){
+        const now = new Date();
+
+        // Arrays for formatting names manually
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // Day/Date
+        const dayOfWeek = days[now.getDay()];
+        const dayOfMonth = now.getDate();
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        const dateString = `${dayOfWeek}, ${pad(dayOfMonth)} ${monthName} ${year}`;
+
+        // Time
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert 24h format to 12h format
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
+
+        const clockElement = document.getElementById('header-clock');
+        if (clockElement) {
+            // Display date string, followed by time string on the next line
+            clockElement.innerHTML = `
+                ${dateString}
+                <br>
+                ${timeString}
+            `;
+        }
+    }
+
+    // FIX: This section MUST be outside the updateClock function so it runs on page load.
+    document.addEventListener('DOMContentLoaded', () => {
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
+</script>
+</body>
+</html>

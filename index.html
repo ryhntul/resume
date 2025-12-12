@@ -1,0 +1,101 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="newstyle.css">
+
+<title>Raihanatul Atirah | Personal Website Home</title>
+</head>
+<body>
+<header> 
+
+    <h1>PERSONAL WEBSITE: HOME</h1>
+    <div id="header-clock" class="header-datetime"></div>
+</header>
+<nav>
+    <a href="new index.html">
+         <span class="nav-icon large-icon">&#127968;</span>
+         <span class="nav-text"> Home page </span></a>
+    <a href="biodata.html">&#129493 Biodata</a>
+    <a href="experience.html"> &#128187 Experience</a>
+    <a href="education.html"> &#127891 Education</a>
+    <a href="family.html"> &#128106 Family</a>
+    <a href="gallery.html"> &#128248 Gallery</a>
+    
+    
+    **Social Media:**<br>
+    <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank">
+        <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;">
+    </a>
+</nav>
+
+<!--TITLE-->
+<h2 class="page-title">Home Page</h2>
+
+<section>
+    <h2>Welcome to My Personal Website</h2>
+    <p>Hii! I'm Raihanatul 'Atirah Binti Ridzuan, a student at Universiti Teknologi MARA (UiTM). This website serves as my online resume and portfolio for the IMD318 Individual Project. You can explore the navigation bar on the left to learn more about my life, experience, and educational background.</p>
+    <div class="centered-image">
+    <img src= "hp.jpg" alt= PROFILE PICTURE width="510" height="300" boarder="10">
+    </div>
+        <div class="centered-music-player">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="150" style="width:300%;max-width:960px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/the-subway-arr-for-piano-by-matt-foster/1846604710"></iframe>
+    
+</body>
+    <p>This site is currently under development to fulfill the requirements of the course. Thank you for visiting!</p>
+    
+    <p style="text-align: right; font-style: italic;">
+        Statement of Responsibility: This website is owned and managed by Raihanatul Atirah Binti Ridzuan.
+    </p>
+</section>
+<footer>
+    Copyright &copy; 2025 Raihanatul Atirah Binti Ridzuan. All Rights Reserved.
+    <marquee behavior="alternate" direction="right"> raihanatul 'atirah </marquee> 
+</footer>
+
+<script>
+    // Helper function for padding single-digit numbers
+    const pad = (number) => (number < 10 ? '0' + number : number);
+
+    function updateClock(){
+        const now = new Date();
+
+        // Arrays for formatting names manually
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // Day/Date
+        const dayOfWeek = days[now.getDay()];
+        const dayOfMonth = now.getDate();
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        const dateString = `${dayOfWeek}, ${pad(dayOfMonth)} ${monthName} ${year}`;
+
+        // Time
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert 24h format to 12h format
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
+
+        const clockElement = document.getElementById('header-clock');
+        if (clockElement) {
+            // Display date string, followed by time string on the next line
+            clockElement.innerHTML = `
+                ${dateString}
+                <br>
+                ${timeString}
+            `;
+        }
+    }
+
+    // FIX: This section MUST be outside the updateClock function so it runs on page load.
+    document.addEventListener('DOMContentLoaded', () => {
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
+</script>
+</body>
+</html>

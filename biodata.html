@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="newstyle.css">
+
+<title>Raihanatul Atirah | Personal Website Home</title>
+</head>
+<body>
+<header>
+
+    <h1>PERSONAL WEBSITE: HOME</h1>
+    <div id="header-clock" class="header-datetime"></div>
+</header>
+<nav>
+    <a href="new index.html">
+         <span class="nav-icon large-icon">&#127968;</span>
+         <span class="nav-text"> Home page </span></a>
+    <a href="biodata.html">&#129493 Biodata</a><hr>
+    <a href="experience.html"> &#128187 Experience</a><hr>
+    <a href="education.html"> &#127891 Education</a><hr>
+    <a href="family.html"> &#128106 Family</a><hr>
+    <a href="gallery.html"> &#128248 Gallery</a><hr>
+    
+    
+    **Social Media:**<br>
+    <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank">
+        <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;">
+    </a>
+</nav>
+
+<audio autoplay>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<!--TITLE-->
+<h2 class="page-title">Biodata</h2>
+
+<section id="biodata" class="section">
+            <h2>Personal Biodata</h2>
+            <div class="centered-image profile">
+            <img src="profile.jpg" alt="PROFILE PICTURE">
+            </div>
+            <table>
+                <caption><h3>My Personal Information</h3></caption>
+                <thead>
+                    <tr>
+                        <th>Detail</th>
+                        <th>Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Full Name</strong></td>
+                        <td style=" font-weight: bold;">RAIHANATUL 'ATIRAH BINTI RIDZUAN</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Campus</strong></td>
+                        <td>
+                        <a href="https://johor.uitm.edu.my/" target="_blank"> UiTM Campus Segamat</a>
+                        <img src="uitm.png" alt="UiTM Icon" class="biodata-icon">
+                        </td>
+                
+                    </tr>
+                    <tr>
+                        <td><strong>Faculty</strong></td>
+                        <td>College of Science Information</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Current Semester</strong></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Class</strong></td>
+                        <td>JSI1105F</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Date of birth</strong></td>
+                        <td>30<sup>th </sup> March 2005</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+            <h3>Connect with Me</h3>
+            <div style="margin-top: 20px;">
+                <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank" title="My TikTok" style="margin-right: 15px;">
+                    <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;"></a>
+                <a href="https://www.instagram.com/ryhntul?igsh=ODFuYzVqOW8wYjdi&utm_source=qr" target="_blank" title="My Instagram">
+                    <img src="ig.gif" alt="Instagram icon" style="width:30px; height:30px;">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+    Copyright &copy; 2025 Raihanatul Atirah Binti Ridzuan. All Rights Reserved.
+    <marquee behavior="alternate" direction="right"> raihanatul 'atirah </marquee> 
+</footer>
+<script>
+    // Helper function for padding single-digit numbers
+    const pad = (number) => (number < 10 ? '0' + number : number);
+
+    function updateClock(){
+        const now = new Date();
+
+        // Arrays for formatting names manually
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // Day/Date
+        const dayOfWeek = days[now.getDay()];
+        const dayOfMonth = now.getDate();
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        const dateString = `${dayOfWeek}, ${pad(dayOfMonth)} ${monthName} ${year}`;
+
+        // Time
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert 24h format to 12h format
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
+
+        const clockElement = document.getElementById('header-clock');
+        if (clockElement) {
+            // Display date string, followed by time string on the next line
+            clockElement.innerHTML = `
+                ${dateString}
+                <br>
+                ${timeString}
+            `;
+        }
+    }
+
+    // FIX: This section MUST be outside the updateClock function so it runs on page load.
+    document.addEventListener('DOMContentLoaded', () => {
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
+</script>
+</body>
+</html>
