@@ -69,6 +69,11 @@ h2 {
     padding-bottom:5px;
 }
 
+h3{
+    color:white;
+    font-size:18px;
+}
+
 nav {
     line-height: 40px;
     background-color: #850E35; 
@@ -765,4 +770,5 @@ img{
 nav img{
     width:35px !important;
     height: 35px !important;
+
 }
