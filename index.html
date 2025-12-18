@@ -1,6 +1,9 @@
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="newstyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
 
 <title>Raihanatul Atirah | Personal Website Home</title>
 </head>
@@ -11,7 +14,7 @@
     <div id="header-clock" class="header-datetime"></div>
 </header>
 <nav>
-    <a href="index.html">
+    <a href="new index.html">
          <span class="nav-icon large-icon">&#127968;</span>
          <span class="nav-text"> Home page </span></a>
     <a href="biodata.html">&#129493 Biodata</a>
@@ -21,7 +24,7 @@
     <a href="gallery.html"> &#128248 Gallery</a>
     
     
-    <h4>Social Media:</h4>
+    <h3>Social Media:</h3>
     <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank">
         <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;">
     </a>
@@ -31,15 +34,34 @@
 <h2 class="page-title">Home Page</h2>
 
 <section>
+    <span id="dynamic-greeting">Welcome!</span>
+
     <h2>Welcome to My Personal Website</h2>
-    <p>Hii! I'm Raihanatul 'Atirah Binti Ridzuan, a student at Universiti Teknologi MARA (UiTM). This website serves as my personal website for the IMD318 Individual Project. You can explore the navigation bar on the left to learn more about my life, experience, educational background, family, and gallery.</p>
-    <div class="centered-image">
-    <img src= "hp.jpg" alt= PROFILE PICTURE width="510" height="300" boarder="10">
+
+    <p>Hii! I'm Raihanatul 'Atirah Binti Ridzuan, a student at Universiti Teknologi MARA (UiTM).</p>
+    
+    <div class="reveal-box" onclick="toggleSection('fact-content')">
+        <div class="reveal-header"><strong>✨ Quick Fact about this project (Click to reveal)</strong></div>
+        <div id="fact-content" class="reveal-content">
+            This website serves as my personal website for the IMD318 Individual Project. You can explore the navigation bar on the left to learn more about my life, experience, and educational background, family, and gallery.
+        </div>
     </div>
-        <div class="centered-music-player">
-            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="150" style="width:300%;max-width:960px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/the-subway-arr-for-piano-by-matt-foster/1846604710"></iframe>
+
+    <div class="reveal-box" onclick="toggleSection('media-content')">
+        <div class="reveal-header">Click here to view the picture and music</div>
+        <div id="media-content" class="reveal-content">
+            <div class="centered-image">
+                <img src="hp.jpg" alt="PROFILE PICTURE">
+            </div>
+            <div class="centered-music-player">
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="150" style="width:300%;max-width:900px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/the-subway-arr-for-piano-by-matt-foster/1846604710"></iframe>
+            </div>
+        </div>
+    </div>
     
 </body>
+    <p>This site is currently under development to fulfill the requirements of the course. Thank you for visiting!</p>
+    
     <p style="text-align: right; font-style: italic;">
         Statement of Responsibility: This website is owned and managed by Raihanatul Atirah Binti Ridzuan.
     </p>
@@ -50,55 +72,47 @@
 </footer>
 
 <script>
-    // Helper function for padding single-digit numbers
-    const pad = (number) => (number < 10 ? '0' + number : number);
-
+   // Clock Logic
     function updateClock(){
         const now = new Date();
-
-        // Arrays for formatting names manually
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const pad = (n) => n < 10 ? '0'+n : n;
 
-        // Day/Date
-        const dayOfWeek = days[now.getDay()];
-        const dayOfMonth = now.getDate();
-        const monthName = months[now.getMonth()];
-        const year = now.getFullYear();
-        const dateString = `${dayOfWeek}, ${pad(dayOfMonth)} ${monthName} ${year}`;
+        const dateStr = `${days[now.getDay()]}, ${pad(now.getDate())} ${months[now.getMonth()]} ${now.getFullYear()}`;
+        let h = now.getHours();
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        h = h % 12 || 12;
+        const timeStr = `${pad(h)}:${pad(now.getMinutes())}:${pad(now.getSeconds())} ${ampm}`;
 
-        // Time
-        let hours = now.getHours();
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
+        document.getElementById('header-clock').innerHTML = `${dateStr}<br>${timeStr}`;
+    }
 
-        // Convert 24h format to 12h format
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
+    // Dynamic Greeting
+    function setGreeting() {
+        const hour = new Date().getHours();
+        const el = document.getElementById('dynamic-greeting');
+        if (hour < 12) el.innerText = "Good Morning! ☀️";
+        else if (hour < 18) el.innerText = "Good Afternoon! 🌤️";
+        else el.innerText = "Good Evening! 🌙";
+    }
 
-        const clockElement = document.getElementById('header-clock');
-        if (clockElement) {
-            // Display date string, followed by time string on the next line
-            clockElement.innerHTML = `
-                ${dateString}
-                <br>
-                ${timeString}
-            `;
+    // UNIVERSAL TOGGLE FUNCTION
+    function toggleSection(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
         }
     }
 
-    // FIX: This section MUST be outside the updateClock function so it runs on page load.
+    // Initialize
     document.addEventListener('DOMContentLoaded', () => {
         updateClock();
         setInterval(updateClock, 1000);
+        setGreeting();
     });
 </script>
 </body>
-
 </html>
-
-
-
-
