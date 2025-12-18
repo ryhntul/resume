@@ -11,7 +11,7 @@
     <div id="header-clock" class="header-datetime"></div>
 </header>
 <nav>
-    <a href="index.html">
+    <a href="new index.html">
          <span class="nav-icon large-icon">&#127968;</span>
          <span class="nav-text"> Home page </span></a>
     <a href="biodata.html">&#129493 Biodata</a>
@@ -21,7 +21,7 @@
     <a href="gallery.html"> &#128248 Gallery</a>
     
     
-    <h4>Social Media:</h4>
+    **Social Media:**<br>
     <a href="https://www.tiktok.com/@chocolate.milo_" target="_blank">
         <img src="tt.gif" alt="tiktok" style="width:30px; height:30px;">
     </a>
@@ -55,9 +55,9 @@
         </div>
         <h3> Academic Achievements</h3>
         <ul>
-            <p>&diams;<strong> Year 3:</strong> Ranked 4<sup>th</sup> in class, received the Best Islamic Education Subject Award.</p>
-            <p>&diams;<strong> Year 5:</strong> Ranked 3<sup>rd</sup> in class, received the Best Islamic Education Subject Award.</p>
-            <p>&diams;<strong> Year 6:</strong> Achieved 4A 2B in the <em>Ujian Penilaian Sekolah Rendah (UPSR)</em>.</p>
+            <p>&diams;<strong> Grade 3:</strong> Ranked 4th in class, received the Best Islamic Education Subject Award.</p>
+            <p>&diams;<strong> Grade 5:</strong> Ranked 3rd in class, received the Best Islamic Education Subject Award.</p>
+            <p>&diams;<strong> Grade 6:</strong> Achieved 4A 2B in the <em>Ujian Penilaian Sekolah Rendah (UPSR)</em>.</p>
         </ul>
     </section>
 <!--SRA AN-NAJAH)-->
@@ -69,11 +69,11 @@
         </div>
         <h3> Academic Achievements</h3>
         <ul>
-            <p>&diams;<strong> Year 1:</strong> Ranked Top 10 in the grade.</p>
-            <p>&diams;<strong> Year 3:</strong> Ranked 6<sup>th</sup> in class.</p>
-            <p>&diams;<strong> Year 4:</strong> Ranked 2<sup>nd</sup> in class, received the Best <em>Akhlak</em> and <em>Feqah</em> Subject Award.</p>
-            <p>&diams;<strong> Year 5 (UPKK):</strong> Achieved 6A 1B in the <em>Ujian Penilaian Kelas KAFA (UPKK)</em>.</p>
-            <p>&diams;<strong> Year 6 (UPSRA):</strong> Achieved 8A 1B in the <em>Ujian Penilaian Sekolah Rendah Agama (UPSRA)</em>.</p>
+            <p>&diams;<strong> Grade 1:</strong> Ranked Top 10 in the grade.</p>
+            <p>&diams;<strong> Grade 3:</strong> Ranked 6th in class.</p>
+            <p>&diams;<strong> Grade 4:</strong> Ranked 2nd in class, received the Best <em>Akhlak</em> and <em>Feqah</em> Subject Award.</p>
+            <p>&diams;<strong> Grade 5 (UPKK):</strong> Achieved 6A 1B in the <em>Ujian Penilaian Kelas KAFA (UPKK)</em>.</p>
+            <p>&diams;<strong> Grade 6 (UPSRA):</strong> Achieved 8A 1B in the <em>Ujian Penilaian Sekolah Rendah Agama (UPSRA)</em>.</p>
         </ul>
     </section>
 <!--SMKPP9(2)-->
@@ -86,9 +86,9 @@
         </div>
         <h3> Academic Achievements</h3>
         <ul>
-            <p>&diams;<strong> Form 1:</strong> Ranked 2<sup>nd</sup> in class, 5th in form, and received the Best Islamic Education Subject Award.</p>
-            <p>&diams;<strong> Form 2:</strong> Ranked 4<sup>th</sup> in class.</p>
-            <p>&diams;<strong> Form 4:</strong> Ranked 2<sup>nd</sup> in class, received the Best Mathematics Subject Award.</p>
+            <p>&diams;<strong> Form 1:</strong> Ranked 2nd in class, 5th in form, and received the Best Islamic Education Subject Award.</p>
+            <p>&diams;<strong> Form 2:</strong> Ranked 4th in class.</p>
+            <p>&diams;<strong> Form 4:</strong> Ranked 2nd in class, received the Best Mathematics Subject Award.</p>
             <p>&diams;<strong> Form 5 (SPM):</strong> Achieved 5A 3B in the <em>Sijil Pelajaran Malaysia (SPM)</em>.</p>
         </ul>
     </section>
@@ -134,59 +134,6 @@
     Copyright &copy; 2025 Raihanatul Atirah Binti Ridzuan. All Rights Reserved.
     <marquee behavior="alternate" direction="right"> raihanatul 'atirah </marquee> 
 </footer>
-<script>
-    // Helper function for padding single-digit numbers
-    const pad = (number) => (number < 10 ? '0' + number : number);
-
-    function updateClock(){
-        const now = new Date();
-
-        // Arrays for formatting names manually
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        // Day/Date
-        const dayOfWeek = days[now.getDay()];
-        const dayOfMonth = now.getDate();
-        const monthName = months[now.getMonth()];
-        const year = now.getFullYear();
-        const dateString = `${dayOfWeek}, ${pad(dayOfMonth)} ${monthName} ${year}`;
-
-        // Time
-        let hours = now.getHours();
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-
-        // Convert 24h format to 12h format
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
-
-        const clockElement = document.getElementById('header-clock');
-        if (clockElement) {
-            // Display date string, followed by time string on the next line
-            clockElement.innerHTML = `
-                ${dateString}
-                <br>
-                ${timeString}
-            `;
-        }
-    }
-
-    // FIX: This section MUST be outside the updateClock function so it runs on page load.
-    document.addEventListener('DOMContentLoaded', () => {
-        updateClock();
-        setInterval(updateClock, 1000);
-    });
-</script>
+<script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
