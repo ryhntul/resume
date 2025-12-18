@@ -148,6 +148,34 @@
         modalImg.alt = currentCategoryCaptions[slideIndex];
         captionText.innerHTML = `${currentCategoryCaptions[slideIndex]} (${slideIndex + 1} of ${currentCategoryImages.length})`;
     }
+const galleryData = {
+    family: {
+        images: [
+            "fam1.jpg","fam2.jpg","fam4.jpg",
+            "hs1.jpeg","hs2.jpeg","hs3.jpeg","hs4.jpeg",
+            "hs5.jpeg","hs6.jpeg","hs7.jpeg","hs8.jpeg","hs9.jpeg",
+            "hs10.jpeg","hs11.jpeg"
+        ],
+        captions: [
+            "Family Moment 1","Family Moment 2","Family Moment 3",
+            "High School 1","High School 2","High School 3","High School 4",
+            "High School 5","High School 6","High School 7","High School 8","High School 9",
+            "High School 10","High School 11"
+        ]
+    },
+    university: {
+        images: [
+            "uni1.jpg","uni2.jpeg","uni3.jpeg",
+            "uni5.jpeg","uni6.jpeg","uni7.jpeg","uni8.jpeg","uni9.jpeg",
+            "uni10.jpeg","uni11.jpeg"
+        ],
+        captions: [
+            "University Life 1","University Life 2","University Life 3",
+            "University Life 4","University Life 5","University Life 6",
+            "University Life 7","University Life 8","University Life 9","University Life 10"
+        ]
+    }
+    }
 
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
@@ -155,3 +183,4 @@
         setInterval(updateClock, 1000);
         setGreeting();
     });
+
